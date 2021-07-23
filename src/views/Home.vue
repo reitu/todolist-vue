@@ -33,8 +33,8 @@ export default {
   components: {},
   data() {
     return {
-      item: "", //When ever you say THIS you mean item is accessible throughout this component, so thats why
-    }; //can call it there in the methods because every thing here is accessible to all the things inside  THIS same component
+      item: "", 
+    }; 
   },
   computed: {
     ...mapGetters(["todos"]),
@@ -49,17 +49,14 @@ export default {
     ]),
 
     addItem() {
-      this.addTodo(this.item); //BE SPECIFIC ABOUT WHEN SOMETHING IS VARIABLE OR NOT
+      this.addTodo(this.item); 
       this.item = "";
     },
     showthem() {
       console.log(this.todos);
     },
   },
-}; //the double binding thing means when you update the data, the template also updates and VICE VERSA!!
-//SO dont need to be calling the render function everytim the data is updated. vuex helps to update the data in vue
-//vue renders the data for you when you change data everytime you update something - its  a RENDERING ENGINE you could say
-//no need to keep calling render funciton. call all updates cos of vue! its BOMB
+}; 
 </script>
 
 
